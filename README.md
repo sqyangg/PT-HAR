@@ -28,7 +28,7 @@ Benchmark
     
 ```
 
-*Example: `python train_baselin_model.py --model panet --dataset UT_HAR_data`*
+*Example: `python train.py  --dataset UT_HAR_data`*
 
 
 

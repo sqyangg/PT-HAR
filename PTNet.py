@@ -399,20 +399,20 @@ class ResNet(nn.Module):
         return x
 
 # -------------------- 模型创建函数 --------------------
-def cotnet50(num_classes, dataset, pretrained=False, **kwargs):
-    """构建 CoTNet-50"""
+def ptnet50(num_classes, dataset, pretrained=False, **kwargs):
+    """构建 ptnet-50"""
     def __init__(self, num_classes, dataset):
-       super(cotnet50, self).__init__()
+       super(ptnet50, self).__init__()
        self.num_classes = num_classes
        self.dataset = dataset
     
     model = ResNet(Bottleneck, [3, 4, 6, 3], num_classes, dataset, stem_width=64, **kwargs)
     return model
 
-def cotnet18(num_classes, dataset, pretrained=False, **kwargs):
-    """构建 CoTNet-18"""
+def ptnet18(num_classes, dataset, pretrained=False, **kwargs):
+    """构建 ptnet-18"""
     def __init__(self, num_classes, dataset):
-       super(cotnet18, self).__init__()
+       super(ptnet18, self).__init__()
        self.num_classes = num_classes
        self.dataset = dataset
     
@@ -421,10 +421,10 @@ def cotnet18(num_classes, dataset, pretrained=False, **kwargs):
 
 
 
-def cotnet101(num_classes, dataset, pretrained=False, **kwargs):
+def ptnet101(num_classes, dataset, pretrained=False, **kwargs):
     """构建 CoTNet-101"""
     def __init__(self, num_classes, dataset):
-       super(cotnet101, self).__init__()
+       super(ptnet101, self).__init__()
        self.num_classes = num_classes
        self.dataset = dataset
     

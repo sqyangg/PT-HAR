@@ -11,7 +11,7 @@ Created on Mon Jul  3 15:36:55 2023
 
 @author: sqyan
 """
-from yacs.config import CfgNode as CN
+#from yacs.config import CfgNode as CN
 
 import os
 import random
@@ -22,7 +22,7 @@ import torch.nn as nn
 import argparse
 from dataset import CSI_Dataset
 from dataset import *
-from PTNet import cotnet50,cotnet18
+from PTNet import ptnet50,ptnet18
 
 import time
 
@@ -123,10 +123,6 @@ def seed_torch(seed=0):
 
 
 if __name__ == "__main__":
-    best_test_acc = 0
-    best_test_epoch = 0
-    for ii in range(151,152):
-        seed_torch(ii)
         
         root = '/home/sqyangg/project/Pose Wifi/WiFi-CSI-Sensing-Benchmark-main/Data/' 
         parser = argparse.ArgumentParser('WiFi Imaging Benchmark')
@@ -155,7 +151,7 @@ if __name__ == "__main__":
             train_epoch = 50
 
         
-        model = cotnet50(num_classes, args.dataset)
+        model = ptnet50(num_classes, args.dataset)
         
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model.to(device)
