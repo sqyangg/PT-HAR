@@ -128,6 +128,8 @@ if __name__ == "__main__":
         parser = argparse.ArgumentParser('WiFi Imaging Benchmark')
         parser.add_argument('--dataset', choices = ['UT_HAR_data','NTU-Fi_HAR']) 
         
+        parser.add_argument('--model', choices = ['ptnet50','ptnet18']) 
+        
         args = parser.parse_args()
     
         args.dataset = 'UT_HAR_data'
@@ -151,7 +153,11 @@ if __name__ == "__main__":
             train_epoch = 50
 
         
-        model = ptnet50(num_classes, args.dataset)
+
+        if args.dataset == 'ptnet50':
+            model = ptnet50(num_classes, args.dataset)
+        else:
+            model = ptnet18(num_classes, args.dataset)
         
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model.to(device)

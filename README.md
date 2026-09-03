@@ -28,7 +28,7 @@ Benchmark
     
 ```
 
-*Example: `python train.py  --dataset UT_HAR_data`*
+*Example: `python train.py --model ptnet50 --dataset UT_HAR_data` or `python train.py --model ptnet18 --dataset NTU-Fi_HAR`*
 
 
 
