@@ -70,12 +70,7 @@ Please download and unzip all the datasets with Linux system in order to avoid d
   publisher={IEEE}
 }
 
-@article{yang2022autofi,
-  title={AutoFi: Towards Automatic WiFi Human Sensing via Geometric Self-Supervised Learning},
-  author={Yang, Jianfei and Chen, Xinyan and Zou, Han and Wang, Dazhuo and Xie, Lihua},
-  journal={arXiv preprint arXiv:2205.01629},
-  year={2022}
-}
+
 
 @article{yang2022efficientfi,
   title={Efficientfi: Towards large-scale lightweight wifi sensing via csi compression},
@@ -85,19 +80,6 @@ Please download and unzip all the datasets with Linux system in order to avoid d
   publisher={IEEE}
 }
 
-@article{wang2022caution,
-  title={CAUTION: A Robust WiFi-based Human Authentication System via Few-shot Open-set Gait Recognition},
-  author={Wang, Dazhuo and Yang, Jianfei and Cui, Wei and Xie, Lihua and Sun, Sumei},
-  journal={IEEE Internet of Things Journal},
-  year={2022},
-  publisher={IEEE}
-}
 
-@article{zhang2021widar3,
-  title={Widar3. 0: Zero-effort cross-domain gesture recognition with wi-fi},
-  author={Zhang, Yi and Zheng, Yue and Qian, Kun and Zhang, Guidong and Liu, Yunhao and Wu, Chenshu and Yang, Zheng},
-  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
-  year={2021},
-  publisher={IEEE}
-}  
+  
 ```
