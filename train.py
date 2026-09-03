@@ -108,7 +108,8 @@ def test(model, tensor_loader, criterion, device):
     print("validation accuracy:{:.4f}, loss:{:.5f}".format(float(test_acc),float(test_loss)))
 
     return test_acc
- 
+
+
 
 
 if __name__ == "__main__":
@@ -121,9 +122,9 @@ if __name__ == "__main__":
         
         args = parser.parse_args()
     
-        args.dataset = 'UT_HAR_data'
     
         if args.dataset == 'UT_HAR_data':
+            print('using dataset: UT_HAR')
             data = UT_HAR_dataset(root)
             train_set = torch.utils.data.TensorDataset(data['X_train'],data['y_train'])
             test_set = torch.utils.data.TensorDataset(torch.cat((data['X_val'],data['X_test']),0),torch.cat((data['y_val'],data['y_test']),0))
