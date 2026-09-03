@@ -17,7 +17,7 @@ Code borrow form https://github.com/xyanchen/WiFi-CSI-Sensing-Benchmark
 ### Download Processed Data
 Please download and organize the [processed datasets](https://drive.google.com/drive/folders/1R0R8SlVbLI1iUFQCzh_mH90H_4CW2iwt?usp=sharing) in this structure:
 ```
-Benchmark
+PT-HAR
 ├── Data
     ├── NTU-Fi_HAR
     │   ├── test_amp
