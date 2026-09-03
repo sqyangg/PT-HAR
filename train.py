@@ -108,23 +108,12 @@ def test(model, tensor_loader, criterion, device):
     print("validation accuracy:{:.4f}, loss:{:.5f}".format(float(test_acc),float(test_loss)))
 
     return test_acc
-
-def seed_torch(seed=0):
-	random.seed(seed)
-	os.environ['PYTHONHASHSEED'] = str(seed) # 为了禁止hash随机化，使得实验可复现
-	np.random.seed(seed)
-	torch.manual_seed(seed)
-	torch.cuda.manual_seed(seed)
-	torch.cuda.manual_seed_all(seed) # if you are using multi-GPU.
-	torch.backends.cudnn.benchmark = False
-	torch.backends.cudnn.deterministic = True
-    #torch.use_deterministic_algorithms(True)  # 有检查操作，看下文区别
  
 
 
 if __name__ == "__main__":
         
-        root = '/home/sqyangg/project/Pose Wifi/WiFi-CSI-Sensing-Benchmark-main/Data/' 
+        root = '/Data/' 
         parser = argparse.ArgumentParser('WiFi Imaging Benchmark')
         parser.add_argument('--dataset', choices = ['UT_HAR_data','NTU-Fi_HAR']) 
         
